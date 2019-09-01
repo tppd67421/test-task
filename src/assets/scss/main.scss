@@ -1,0 +1,61 @@
+.header {
+    background-color: #ccc;
+    height: 15vh;
+    .apple, .pear, .clear {
+        position: relative;
+        height: 70%;
+        background-color: red;
+        cursor: pointer;
+        user-select: none;
+        &.active {
+            background-color: green;
+        }
+    }
+}
+
+.dropzone {
+    background-color: blue;
+    color: #fff;
+    height: 85vh;
+    font-size: 40px;
+    &.active {
+        border: 20px dashed black;
+        opacity: .5;
+    }
+}
+
+.result {
+    background-color: rgb(233, 233, 233);
+    height: 85vh;
+    display: grid;
+    grid-template: 33fr 33fr 33fr / 50fr 50fr;
+    grid-gap: 20px;
+    * {
+        border: 2px solid rgb(138, 138, 138);
+    }
+    &-img {
+        grid-column-start: 1; 
+        grid-column-end: 2; 
+        grid-row-start: 1; 
+        grid-row-end: 3;
+        height: 100%;
+    }
+    .state {
+        grid-column-start: 2; 
+        grid-column-end: 3; 
+        grid-row-start: 1; 
+        grid-row-end: 2; 
+    }
+    .size {
+        grid-column-start: 2; 
+        grid-column-end: 3;
+        grid-row-start: 2; 
+        grid-row-end: 3; 
+    }
+    .sort {
+        grid-column-start: 1; 
+        grid-column-end: 3; 
+        grid-row-start: 3; 
+        grid-row-end: 4; 
+    }
+}
